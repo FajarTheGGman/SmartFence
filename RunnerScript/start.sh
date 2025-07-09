@@ -24,7 +24,7 @@ cd DatabaseService && docker compose up -d
 echo -e "[+] Running Device Management ..."
 cd ../DevicesManagement && docker compose up -d
 echo -e "[+] Running Sensor Management ..."
-cd ../SensorMQTT && docker compose up -d
+cd ../HardwareService && docker compose up -d
 echo -e "[+] Running Users Management ..."
 cd ../UsersManagement && docker compose up -d
 echo -e "[+] Running AnalyticsManagement Service ..."

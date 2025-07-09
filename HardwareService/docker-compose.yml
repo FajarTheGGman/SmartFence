@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  smartfence_mqtt_broker:
+    image: eclipse-mosquitto:2
+    container_name: smartfence_mqtt_broker
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${MQTT_PORT}:1883"        # MQTT port
+      - "${WEBSOCKET_PORT}:9001"        # WebSocket port (optional)
+    volumes:
+      - ./config:/mosquitto/config
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
+    networks:
+      - app_network
+      - databaseservice_smartfence_database_network
+
+  smartfence_hardware_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: smartfence_hardware_service
+    env_file:
+      - .env
+    environment:
+      - MODE=production
+      - PROD_PORT=${PROD_PORT}
+      - DEV_PORT=${DEV_PORT}
+    expose:
+      - ${PROD_PORT}
+    volumes:
+      - .:/app
+    working_dir: /app
+    networks:
+      - app_network  # <-- Shared network with broker
+      - databaseservice_smartfence_database_network
+
+networks:
+  app_network:
+    driver: bridge
+
+  databaseservice_smartfence_database_network:
+    external: true
