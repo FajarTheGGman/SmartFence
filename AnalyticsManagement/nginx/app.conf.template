@@ -1,7 +1,7 @@
 upstream golang_backend {
     # Define the backend servers (app1 and app2)
-    server siijah_usersmanagement_app1:${PROD_PORT};
-    server siijah_usersmanagement_app2:${PROD_PORT};
+    server smartfence_analyticsmanagement1:${PROD_PORT};
+    server smartfence_analyticsmanagement2:${PROD_PORT};
 }
 
 server {

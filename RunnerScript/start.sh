@@ -36,7 +36,7 @@ cd ../LandingEndpoint && docker compose up -d
 echo -e "[+] All Services are running ..."
 
 echo -e "\n[*] Running Clouflare Tunnel ..."
-cd ../../scripts
+cd ../RunnerScript
 
 # curl to http://localhost:7072 to ensure the service is up
 echo -e "[+] Waiting for the service to be ready ..."

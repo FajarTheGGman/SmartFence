@@ -14,7 +14,7 @@ services:
       - ./html:/usr/share/nginx/html  # Ensure the HTML files are correctly mounted
     entrypoint: ["/bin/sh", "/entrypoint.sh"]
     networks:
-      - sensormqtt_app_network
+      - hardwareservice_app_network
       - smartfence_landing_webservice_network
       - usersmanagement_smartfence_usersmanagement_network
       - devicesmanagement_smartfence_devicemanagement_network
@@ -49,6 +49,6 @@ networks:
   analyticsmanagement_smartfence_analyticsmanagement_network:
     external: true
 
-  sensormqtt_app_network:
+  hardwareservice_app_network:
     external: true
 
