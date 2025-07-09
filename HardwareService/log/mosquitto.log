@@ -15,3 +15,13 @@
 1752047667: mosquitto version 2.0.21 running
 1752047667: New connection from 192.168.0.14:45732 on port 1883.
 1752047667: New client connected from 192.168.0.14:45732 as go-client (p2, c1, k30).
+1752047964: Client go-client closed its connection.
+1752047964: mosquitto version 2.0.21 terminating
+1752047964: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752047984: mosquitto version 2.0.21 starting
+1752047984: Config loaded from /mosquitto/config/mosquitto.conf.
+1752047984: Opening ipv4 listen socket on port 1883.
+1752047984: Opening ipv6 listen socket on port 1883.
+1752047984: mosquitto version 2.0.21 running
+1752047984: New connection from 192.168.0.12:39968 on port 1883.
+1752047984: New client connected from 192.168.0.12:39968 as go-client (p2, c1, k30).
