@@ -1,0 +1,60 @@
+version: '2.3'
+
+# postgres service
+services:
+  postgres_smartfence:
+    image: postgres:latest
+    container_name: postgres_smartfence
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}  
+      DB_USER: ${DB_USERNAME}  
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./pginit:/docker-entrypoint-initdb.d 
+    networks:
+      - smartfence_database_network
+
+  mongodb_smartfence:
+    image: mongo:latest
+    container_name: mongodb_smartfence
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "${MONGODB_PORT}:27017"
+    env_file:
+      - .env
+    volumes:
+      - ./mongodb:/data/db
+    networks:
+      - smartfence_database_network
+
+  pgadmin_smartfence:
+    image: dpage/pgadmin4
+    container_name: pgadmin_smartfence
+    restart: always
+    ports:
+      - "${PGADMIN_PORT}:80"
+    env_file:
+      - .env
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    depends_on:
+      - postgres_smartfence
+    networks:
+      - smartfence_database_network
+
+networks:
+  smartfence_database_network:
+    driver: bridge
