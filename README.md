@@ -1,3 +1,15 @@
+
+<div align="center">
+  <img src="./image/icons.png" height="100" width="100" />
+  <h2>Smart Fence Security System</h2>
+  <img src="https://img.shields.io/badge/Flutter-v3.27.1-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Golang-v1.23.1-skyblue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/MongoDB-v8.0-green?style=flat-square"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-v17.5-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Nginx-v1.29.0-green?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Cloudflare-ZeroTrust-orange?style=flat-square"/>
+</div>
+
 # 🛡️ SmartFence Security System
 
 Secure your home with intelligent fencing powered by IoT, automation, and real-time monitoring.
