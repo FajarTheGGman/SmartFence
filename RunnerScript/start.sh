@@ -18,7 +18,7 @@ if ! command -v docker &> /dev/null; then
 fi
 
 echo -e "\n[*] Running Microservice ..."
-cd ../microservices
+cd ../
 echo -e "[+] Running Database ..."
 cd DatabaseService && docker compose up -d
 echo -e "[+] Running Device Management ..."
