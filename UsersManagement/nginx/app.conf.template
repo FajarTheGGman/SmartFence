@@ -1,0 +1,22 @@
+upstream golang_backend {
+    # Define the backend servers (app1 and app2)
+    server smartfence_usersmanagement1:${PROD_PORT};
+    server smartfence_usersmanagement2:${PROD_PORT};
+}
+
+server {
+    listen 80;
+
+    location / {
+        # Proxy requests to the backend services
+        proxy_pass http://golang_backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    # Optional: Health check endpoint
+    location /health {
+        return 200 "OK\n";
+    }
+}
