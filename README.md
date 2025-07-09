@@ -30,6 +30,8 @@ SmartFence integrates IoT devices and modern software technologies to provide a 
 
 ---
 
+![image_architecture](./image/architecture.png)
+
 ## 💻 Software Architecture
 
 ### 🌐 Backend
