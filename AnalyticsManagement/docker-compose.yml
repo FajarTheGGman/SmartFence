@@ -41,7 +41,7 @@ services:
   smartfence_nginx_analyticsmanagement:
     build:
       context: .
-      dockerfile: nginx.Dockerfile
+      dockerfile: Dockerfile.nginx
     platform: linux/amd64
     volumes:
       - ./nginx/app.conf.template:/etc/nginx/conf.d/app.conf.template
