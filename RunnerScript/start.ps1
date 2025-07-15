@@ -1,7 +1,6 @@
-# SmartFence PowerShell Initialization Script
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+# SmartFenceSystem.ps1
 
-@"
+Write-Host @"
   ___                _   ___                
  / __|_ __  __ _ _ _| |_| __|__ _ _  __ ___ 
  \__ \ '  \/ _` | '_|  _| _/ -_) ' \/ _/ -_)
@@ -10,55 +9,63 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 Name : SmartFence System
 Description : Internet of Things Early Warning System and Monitoring For Fence
 Version : 1.0.0
-"@
+"@ -ForegroundColor Cyan
 
-Write-Host "[+] Checking Docker..."
+Write-Host "`n[+] Checking Docker..."
 if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
-    Write-Error "[-] Docker is not installed. Please install Docker first."
+    Write-Host "[-] Docker is not installed. Please install Docker first." -ForegroundColor Red
     exit 1
 }
 
-Write-Host "`n[*] Running Microservices ..."
-Set-Location ../microservices
+Write-Host "`n[*] Running Microservice ..."
+
+# Save the starting location to return to it later
+$BaseDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+Set-Location -Path (Join-Path $BaseDir "..")
 
 Write-Host "[+] Running Database ..."
-Set-Location DatabaseService
+Set-Location -Path ".\DatabaseService"
 docker compose up -d
 
 Write-Host "[+] Running Device Management ..."
-Set-Location ../DevicesManagement
+Set-Location -Path "..\DevicesManagement"
 docker compose up -d
 
 Write-Host "[+] Running Sensor Management ..."
-Set-Location ../SensorMQTT
+Set-Location -Path "..\HardwareService"
 docker compose up -d
 
 Write-Host "[+] Running Users Management ..."
-Set-Location ../UsersManagement
+Set-Location -Path "..\UsersManagement"
+docker compose up -d
+
+Write-Host "[+] Running AnalyticsManagement Service ..."
+Set-Location -Path "..\AnalyticsManagement"
 docker compose up -d
 
 Write-Host "[+] Running LandingPoint Service ..."
-Set-Location ../LandingEndpoint
+Set-Location -Path "..\LandingEndpoint"
 docker compose up -d
 
 Write-Host "[+] All Services are running ..."
 
 Write-Host "`n[*] Running Cloudflare Tunnel ..."
-Set-Location ../../scripts
+Set-Location -Path "..\RunnerScript"
 
-# Wait for the service on port 7072
+# Wait for service to be ready
 Write-Host "[+] Waiting for the service to be ready ..."
-do {
+while ($true) {
     try {
-        $response = Invoke-WebRequest -Uri "http://localhost:7072" -UseBasicParsing -TimeoutSec 2
-        Start-Sleep -Seconds 1
+        $response = Invoke-WebRequest -Uri "http://localhost:7072" -UseBasicParsing -TimeoutSec 3
+        if ($response.StatusCode -eq 200) { break }
     } catch {
         Write-Host -NoNewline "."
         Start-Sleep -Seconds 1
     }
-} while (-not $response)
+}
 
-Write-Host "`n[+] Service is responding. Starting tunnel..."
+Write-Host "`n[+] Service is ready."
 
-# Run the tunnel (make sure tunnel.sh is PowerShell compatible or call WSL/bash)
-bash ./tunnel.sh
+# Start tunnel script
+Write-Host "[+] Starting tunnel.sh ..."
+Start-Process -FilePath "bash" -ArgumentList "tunnel.sh" -NoNewWindow -Wait
