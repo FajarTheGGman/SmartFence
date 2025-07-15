@@ -1,6 +1,8 @@
 FROM --platform=linux/amd64 nginx:latest
 
 COPY ./entrypoint.sh /entrypoint.sh
+COPY ./nginx/app.conf.template /etc/nginx/conf.d/app.conf.template
+
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
