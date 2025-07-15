@@ -40,6 +40,7 @@ services:
 
   smartfence_nginx_analyticsmanagement:
     image: nginx:latest
+    platform: linux/amd64
     container_name: smartfence_nginx_analyticsmanagement
     ports:
       - "${WEBSERVER_PORT}:80"
