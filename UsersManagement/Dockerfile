@@ -3,11 +3,11 @@ FROM golang:1.23 AS builder
 
 WORKDIR /app
 
-COPY ./AnalyticsManagement /app/AnalyticsManagement
+COPY ./UsersManagement /app/UsersManagement
 COPY ./.env /app/.env
 
-RUN chmod +x /app/AnalyticsManagement
+RUN chmod +x /app/UsersManagement
 
 EXPOSE 4001
 
-CMD ["./AnalyticsManagement"]
+CMD ["./UsersManagement"]
