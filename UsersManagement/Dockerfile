@@ -3,11 +3,11 @@ FROM golang:1.23 AS builder
 
 WORKDIR /app
 
-COPY ./UsersManagement /app/UsersManagement
+COPY ./AnalyticsManagement /app/AnalyticsManagement
 COPY ./.env /app/.env
 
-RUN chmod +x /app/UsersManagement
+RUN chmod +x /app/AnalyticsManagement
 
-# Set the binary as the entrypoint
-EXPOSE 7002
-ENTRYPOINT ["./UsersManagement"]
+EXPOSE 4001
+
+CMD ["./AnalyticsManagement"]
