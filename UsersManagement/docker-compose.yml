@@ -55,6 +55,7 @@ services:
       - smartfence_usersmanagement_network
       - databaseservice_smartfence_database_network
 
+
 networks:
   smartfence_usersmanagement_network:
     driver: bridge
