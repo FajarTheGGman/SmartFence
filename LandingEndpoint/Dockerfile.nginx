@@ -1,5 +1,7 @@
+# nginx-landing.Dockerfile
 FROM --platform=linux/amd64 nginx:latest
 
+# Copy and make your entrypoint.sh executable
 COPY ./entrypoint.sh /entrypoint.sh
 COPY ./nginx/app.conf.template /etc/nginx/conf.d/app.conf.template
 
