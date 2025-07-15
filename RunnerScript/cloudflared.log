@@ -1,20 +1,18 @@
-2025-07-14T15:19:56Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2025-07-14T15:19:56Z INF Requesting new quick Tunnel on trycloudflare.com...
-2025-07-14T15:20:01Z INF +--------------------------------------------------------------------------------------------+
-2025-07-14T15:20:01Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2025-07-14T15:20:01Z INF |  https://assembled-marvel-alberta-handy.trycloudflare.com                                  |
-2025-07-14T15:20:01Z INF +--------------------------------------------------------------------------------------------+
-2025-07-14T15:20:01Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2025-07-14T15:20:01Z INF Version 2024.11.1 (Checksum 55d789465955ccfffcd61ba72807a2a4495002f7d9b7cc5eadcaa1f93c279d25)
-2025-07-14T15:20:01Z INF GOOS: linux, GOVersion: go1.22.5, GoArch: amd64
-2025-07-14T15:20:01Z INF Settings: map[ha-connections:1 no-autoupdate:true protocol:quic url:http://localhost:7072]
-2025-07-14T15:20:01Z INF cloudflared will not automatically update if installed by a package manager.
-2025-07-14T15:20:01Z INF Generated Connector ID: b7d8da02-9acf-4432-948b-8126f03aca26
-2025-07-14T15:20:02Z INF Initial protocol quic
-2025-07-14T15:20:02Z INF ICMP proxy will use 192.168.91.155 as source for IPv4
-2025-07-14T15:20:02Z INF ICMP proxy will use fe80::58ff:aedb:25ea:aca7 in zone wlp2s0 as source for IPv6
-2025-07-14T15:20:02Z INF Starting metrics server on 127.0.0.1:45387/metrics
-2025/07/14 22:20:02 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
-2025-07-14T15:20:02Z INF Registered tunnel connection connIndex=0 connection=f9cf34ab-801f-44da-99c7-d14dd8768155 event=0 ip=198.41.192.7 location=sin21 protocol=quic
-2025-07-14T15:28:54Z ERR  error="stream 21 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:7072
-2025-07-14T15:28:54Z ERR Request failed error="stream 21 canceled by remote with error code 0" connIndex=0 dest=https://assembled-marvel-alberta-handy.trycloudflare.com/app/smartfence.apk event=0 ip=198.41.192.7 type=http
+2025-07-15T10:14:48Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-07-15T10:14:48Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-07-15T10:14:53Z INF +--------------------------------------------------------------------------------------------+
+2025-07-15T10:14:53Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-07-15T10:14:53Z INF |  https://jewel-samples-knew-korean.trycloudflare.com                                       |
+2025-07-15T10:14:53Z INF +--------------------------------------------------------------------------------------------+
+2025-07-15T10:14:53Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-07-15T10:14:53Z INF Version 2024.11.1 (Checksum 55d789465955ccfffcd61ba72807a2a4495002f7d9b7cc5eadcaa1f93c279d25)
+2025-07-15T10:14:53Z INF GOOS: linux, GOVersion: go1.22.5, GoArch: amd64
+2025-07-15T10:14:53Z INF Settings: map[ha-connections:1 no-autoupdate:true protocol:quic url:http://localhost:7072]
+2025-07-15T10:14:53Z INF cloudflared will not automatically update if installed by a package manager.
+2025-07-15T10:14:53Z INF Generated Connector ID: 3b3d1b1f-53da-4389-adf4-866e29366b7a
+2025-07-15T10:14:53Z INF Initial protocol quic
+2025-07-15T10:14:53Z INF ICMP proxy will use 192.168.88.252 as source for IPv4
+2025-07-15T10:14:53Z INF ICMP proxy will use fe80::6e13:8d94:3745:c813 in zone wlp2s0 as source for IPv6
+2025-07-15T10:14:53Z INF Starting metrics server on 127.0.0.1:45889/metrics
+2025/07/15 17:14:53 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
+2025-07-15T10:14:54Z INF Registered tunnel connection connIndex=0 connection=c2550bc7-4cf5-49c1-8541-36010af1a7d4 event=0 ip=198.41.192.67 location=sin21 protocol=quic

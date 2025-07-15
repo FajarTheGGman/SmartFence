@@ -501,3 +501,14 @@
 1752548554: Opening ipv4 listen socket on port 1883.
 1752548554: Opening ipv6 listen socket on port 1883.
 1752548554: mosquitto version 2.0.22 running
+1752573962: mosquitto version 2.0.22 starting
+1752573962: Config loaded from /mosquitto/config/mosquitto.conf.
+1752573962: Opening ipv4 listen socket on port 1883.
+1752573962: Opening ipv6 listen socket on port 1883.
+1752573962: mosquitto version 2.0.22 running
+1752574478: New connection from 192.168.0.9:45470 on port 1883.
+1752574478: New client connected from 192.168.0.9:45470 as go-client (p2, c1, k30).
+1752575762: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752577563: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752579364: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752581165: Saving in-memory database to /mosquitto/data//mosquitto.db.
