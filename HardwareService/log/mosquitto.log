@@ -470,3 +470,34 @@
 1752474685: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1752476486: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1752478287: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752488969: mosquitto version 2.0.22 starting
+1752488969: Config loaded from /mosquitto/config/mosquitto.conf.
+1752488969: Opening ipv4 listen socket on port 1883.
+1752488969: Opening ipv6 listen socket on port 1883.
+1752488969: mosquitto version 2.0.22 running
+1752488997: New connection from 192.168.0.9:47906 on port 1883.
+1752488997: New client connected from 192.168.0.9:47906 as go-client (p2, c1, k30).
+1752492528: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752492528: Client go-client has exceeded timeout, disconnecting.
+1752492528: New connection from 192.168.0.9:49864 on port 1883.
+1752492528: New client connected from 192.168.0.9:49864 as go-client (p2, c1, k30).
+1752494477: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752504549: mosquitto version 2.0.22 starting
+1752504549: Config loaded from /mosquitto/config/mosquitto.conf.
+1752504549: Opening ipv4 listen socket on port 1883.
+1752504549: Opening ipv6 listen socket on port 1883.
+1752504549: mosquitto version 2.0.22 running
+1752504589: mosquitto version 2.0.22 terminating
+1752504589: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1752506391: mosquitto version 2.0.22 starting
+1752506391: Config loaded from /mosquitto/config/mosquitto.conf.
+1752506391: Opening ipv4 listen socket on port 1883.
+1752506391: Opening ipv6 listen socket on port 1883.
+1752506391: mosquitto version 2.0.22 running
+1752506392: New connection from 192.168.0.9:46588 on port 1883.
+1752506392: New client connected from 192.168.0.9:46588 as go-client (p2, c1, k30).
+1752548554: mosquitto version 2.0.22 starting
+1752548554: Config loaded from /mosquitto/config/mosquitto.conf.
+1752548554: Opening ipv4 listen socket on port 1883.
+1752548554: Opening ipv6 listen socket on port 1883.
+1752548554: mosquitto version 2.0.22 running
