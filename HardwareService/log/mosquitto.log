@@ -766,3 +766,4 @@
 1752721830: mosquitto version 2.0.22 running
 1752721866: New connection from 192.168.0.9:50898 on port 1883.
 1752721866: New client connected from 192.168.0.9:50898 as go-client (p2, c1, k30).
+1752723631: Saving in-memory database to /mosquitto/data//mosquitto.db.
