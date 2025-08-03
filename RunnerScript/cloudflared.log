@@ -1,24 +1,25 @@
-2025-07-17T03:56:35Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2025-07-17T03:56:35Z INF Requesting new quick Tunnel on trycloudflare.com...
-2025-07-17T03:56:41Z INF +--------------------------------------------------------------------------------------------+
-2025-07-17T03:56:41Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2025-07-17T03:56:41Z INF |  https://pos-fwd-cw-projects.trycloudflare.com                                             |
-2025-07-17T03:56:41Z INF +--------------------------------------------------------------------------------------------+
-2025-07-17T03:56:41Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2025-07-17T03:56:41Z INF Version 2024.11.1 (Checksum 55d789465955ccfffcd61ba72807a2a4495002f7d9b7cc5eadcaa1f93c279d25)
-2025-07-17T03:56:41Z INF GOOS: linux, GOVersion: go1.22.5, GoArch: amd64
-2025-07-17T03:56:41Z INF Settings: map[ha-connections:1 no-autoupdate:true protocol:quic url:http://localhost:7072]
-2025-07-17T03:56:41Z INF cloudflared will not automatically update if installed by a package manager.
-2025-07-17T03:56:41Z INF Generated Connector ID: a6f8cb3e-3c2a-4afb-896b-d9abb23838db
-2025-07-17T03:56:41Z INF Initial protocol quic
-2025-07-17T03:56:41Z INF ICMP proxy will use 192.168.200.225 as source for IPv4
-2025-07-17T03:56:41Z INF ICMP proxy will use fe80::3bd6:26b0:b1d7:e1c6 in zone wlp2s0 as source for IPv6
-2025-07-17T03:56:41Z INF Starting metrics server on 127.0.0.1:40989/metrics
-2025/07/17 10:56:41 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
-2025-07-17T03:56:42Z INF Registered tunnel connection connIndex=0 connection=b189d160-71ca-411c-a78a-9d3b0b8914d6 event=0 ip=198.41.200.53 location=sin11 protocol=quic
-2025-07-17T03:58:42Z INF Initiating graceful shutdown due to signal interrupt ...
-2025-07-17T03:58:42Z ERR Failed to serve tunnel connection error="context canceled" connIndex=0 event=0 ip=198.41.200.53
-2025-07-17T03:58:42Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.200.53
-2025-07-17T03:58:42Z ERR no more connections active and exiting
-2025-07-17T03:58:42Z INF Tunnel server stopped
-2025-07-17T03:58:42Z INF Metrics server stopped
+2025-08-03T10:25:34Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-08-03T10:25:34Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-08-03T10:25:39Z INF +--------------------------------------------------------------------------------------------+
+2025-08-03T10:25:39Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-08-03T10:25:39Z INF |  https://discs-productivity-yamaha-pet.trycloudflare.com                                   |
+2025-08-03T10:25:39Z INF +--------------------------------------------------------------------------------------------+
+2025-08-03T10:25:39Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-08-03T10:25:39Z INF Version 2024.11.1 (Checksum 55d789465955ccfffcd61ba72807a2a4495002f7d9b7cc5eadcaa1f93c279d25)
+2025-08-03T10:25:39Z INF GOOS: linux, GOVersion: go1.22.5, GoArch: amd64
+2025-08-03T10:25:39Z INF Settings: map[ha-connections:1 no-autoupdate:true protocol:quic url:http://localhost:7072]
+2025-08-03T10:25:39Z INF cloudflared will not automatically update if installed by a package manager.
+2025-08-03T10:25:39Z INF Generated Connector ID: cf16c5fa-706b-44c4-8043-565bea9fa87f
+2025-08-03T10:25:39Z INF Initial protocol quic
+2025-08-03T10:25:39Z INF ICMP proxy will use 192.168.88.252 as source for IPv4
+2025-08-03T10:25:39Z INF ICMP proxy will use fe80::6e13:8d94:3745:c813 in zone wlp2s0 as source for IPv6
+2025-08-03T10:25:39Z INF Starting metrics server on 127.0.0.1:37175/metrics
+2025/08/03 17:25:39 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
+2025-08-03T10:25:40Z INF Registered tunnel connection connIndex=0 connection=fe35fef1-d29f-476b-a8f8-3a6edd01e8e1 event=0 ip=198.41.192.37 location=sin21 protocol=quic
+2025-08-03T14:21:44Z INF Initiating graceful shutdown due to signal interrupt ...
+2025-08-03T14:21:45Z ERR Failed to serve tunnel connection error="Application error 0x0 (remote)" connIndex=0 event=0 ip=198.41.192.37
+2025-08-03T14:21:45Z ERR Serve tunnel error error="Application error 0x0 (remote)" connIndex=0 event=0 ip=198.41.192.37
+2025-08-03T14:21:45Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.192.37
+2025-08-03T14:21:45Z ERR no more connections active and exiting
+2025-08-03T14:21:45Z INF Tunnel server stopped
+2025-08-03T14:21:45Z INF Metrics server stopped

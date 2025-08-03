@@ -1,10 +1,13 @@
-# nginx-landing.Dockerfile
 FROM --platform=linux/amd64 nginx:latest
 
-# Copy and make your entrypoint.sh executable
+# Copy template and script
 COPY ./entrypoint.sh /entrypoint.sh
 COPY ./nginx/app.conf.template /etc/nginx/conf.d/app.conf.template
 
-RUN chmod +x /entrypoint.sh
+# Ensure entrypoint is executable
+RUN chmod +x /entrypoint.sh && \
+    # Strip CR characters from shell script and template
+    sed -i 's/\r$//' /entrypoint.sh && \
+    sed -i 's/\r$//' /etc/nginx/conf.d/app.conf.template
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
